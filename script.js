@@ -1,9 +1,11 @@
 let nome;
 
+
+
 function renderizarMensagem(resposta){
     console.log(resposta)
 
-const lista = resposta.data;
+    
 
 //pegar ul
 const container = document.querySelector('.mensagens');
@@ -12,9 +14,9 @@ const container = document.querySelector('.mensagens');
 container.innerHTML= '';
 
 //percorrer o array 
-for(let i = 0; i < lista.length; i++){
+for(let i = 0; i <resposta.length; i++){
 
-    let mensagem = lista[i];
+    let mensagem =resposta[i];
 
     let templete;
 
@@ -30,7 +32,7 @@ for(let i = 0; i < lista.length; i++){
         </li>
     `;
 
-    } else if (mensagem.from === null){
+    } else if (mensagem.type === 'status'){
         
         templete = `
                 
@@ -41,7 +43,7 @@ for(let i = 0; i < lista.length; i++){
             </li>
         `;
                
-    }else if (mensagem.to === 'Todos'){
+    }else  if (mensagem.to === 'Todos') {
 
         templete = ` 
             <li class="conversa-publica">
@@ -69,8 +71,18 @@ for(let i = 0; i < lista.length; i++){
     console.log(erro);
 }
 
+function pegarmensagens(resposta){
+
+    mensagens = resposta.data;
+    renderizarMensagem(mensagens);
+
+}
+
 function registrouCerto(resposta){
     console.log(resposta);
+    setInterval(atualizarStatus, 5000);
+    const promise = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
+    promise.then(pegarmensagens)
 }
 
 function erroAoAtualizarStatus(erro){
@@ -91,11 +103,11 @@ function atualizarStatus(){
 
 function carregarChat(){
     nome = prompt("Qual o seu nome ?");
+    const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', {name:nome})
+  
+    promise.then(registrouCerto);
+    promise.catch(erroAoRegistrar);
 
-    registrouCerto();
-    carregarMensagens();
-
-    setInterval(atualizarStatus, 5000);
 }
 carregarChat();
 atualizarStatus();
