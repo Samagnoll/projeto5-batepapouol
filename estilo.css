@@ -1,113 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500&display=swap");
 
 body{
-    Width: 375px;
-    background-color: #F3F3F3;
-    position: relative;
-    height: 700px;
-    font-family: "Roboto", sans-serif;
+  Width: 375px;
+  background-color: #F3F3F3;
+  font-family: "Roboto", sans-serif;
 }
-
-  li {
-    width: 357px;
-    padding: 10px;
-    margin-bottom: 4px;
-    line-height: 22px;
-    word-break: break-word;
-  }
-  
-  .entrada-saida {
-    background-color: #aaa;
-
-  }
-  
-  .conversa-publica {
-    background: #fff;
-  }
-  
-  .conversa-privada {
-    background: #ffdede;
-  }
-  
-  .horario {
-    margin-right: 5px;
-    color: #b8b8b8;
-  }
 
 .parteFixaCima{
-    Width: 375px;
-    height: 80px;
-    background-color:#FFFFFF;
-    box-shadow: 0px 1px 10px black;
-    position:fixed;
-    display: inline;
-    margin-top: -80px;
-    z-index: 1;
+  Width: 375px;
+  height: 1080px;
+  height: 80px;
+  background-color:#FFFFFF;
+  position:fixed;
+  display: initial;
+  z-index: 2;
 }
 
-.imagembt{
-    height: 53px;
-    width: 75px;
-    left: 22px;
-    top: 16px;
-    border-radius: 0px;
-    margin-left: 10px;
-    margin-top: 0px;
-    position:fixed;
-    display: inline;
+ .logo{
+  height: 53px;
+  width: 75px;
+  left: 22px;
+  top: 16px;
+  border-radius: 0px;
+  margin-left: 22px;
+  margin-top: 16px;
 }
 
-.people{
-    height: 53px;
-    width: 75px;
-    margin-top: 16px;
-    margin-left: 290px;
-    position:fixed;
-    display: inline;
+.icone{
+  height: 53px;
+  width: 75px;
+  left: 22px;
+  top: 16px;
+  margin-left: 170px;
 }
 
-.parteFixaBaixa{
-    height: 80px;
-    width: 375px;
-    border-radius: 0px;
-    background-color:#FFFFFF;
-    box-shadow: 0px 1px 10px black;
-    position:fixed;
-    display: inline;
-    z-index: 3;
-    left: 0px;
-    bottom: 0px;
+main{
+  position: absolute;
+  display: initial; 
+  Width: 375px;
+  height: 1000px;
+  background-color: #E5E5E5;
+  z-index: 0;
+  padding-top: 90px;
 }
 
-.iconebaixo{
-    margin-top: 30px;
-    margin-left: 300px;
-    position:fixed;
-    display: inline;
-    z-index: 3;
+
+.entrada-saida {
+  background-color: #aaa;
 
 }
 
-.parteMovel{
-    height: 1080px;
-    Width: 375px;
-    background-color: #E5E5E5;
-    z-index: 0;
-    margin-top: 80px;
+.conversa-publica {
+  background: #fff;
+}
+
+.conversa-privada {
+  background: #ffdede;
+}
+
+.horario {
+  margin-right: 5px;
+  color: #b8b8b8;
+}
+
+li {
+  width: 357px;
+  padding: 10px;
+  margin-bottom: 4px;
+  line-height: 22px;
+  word-break: break-word;
+}
+
+footer{
+  height: 80px;
+  width: 375px;
+  border-radius: 0px;
+  background-color:#F3F3F3;
+  position:fixed;
+  display: initial;
+  z-index: 2;
+  bottom: 0px;
 }
 
 input {
-    height: 80px;
-    width: 300px;
-    position:fixed;
-    display: inline;
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #000000;    
-    font-weight: bold;
+  height: 80px;
+  width: 400px;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;   
+  display: initial; 
+  position: fixed;
+  background-color: transparent;
+  border-color: transparent;
 }
+
+.icone2 {
+ margin-left: 300px;
+ margin-top: 15px;
+ height: 53px;
+ width: 75px;
+ left: 22px;
+ top: 16px;
+}
+
+
